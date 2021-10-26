@@ -1,8 +1,58 @@
-const data = require('./data/data.json');
-console.log(data);
+const dataPreCleaned = require('./data/data.json');
+const data = require('./data/tech-track-dataset.json');
 
-// With FS
-// const fs = require('fs');
-// const data = fs.readFileSync('./data/tech-track-dataset.json', 'utf-8');
-// const parsedData = JSON.parse(data);
-// console.log(parsedData);
+const eyecolor = [];
+const windDirections = [];
+
+// Get specific data
+dataPreCleaned.forEach((e) => {
+    eyecolor.push(e['eye-color']);
+    windDirections.push(e['favourite-wind-direction']);
+});
+
+//Cleaning data (Removing Dash, Spaces and Capitalizing)
+function cleaningData(data) {
+    const cleanedArray = [];
+    data.forEach((e) => {
+        let string = removeDashAndSpaces(e);
+        string = firstLetterToUppercase(string);
+        cleanedArray.push(string);
+    });
+    return cleanedArray;
+}
+
+// Removing of dashed and spaces
+function removeDashAndSpaces(string) {
+    let str = string.replace(/\s+/g, '');
+    return str.replace('-', '');
+}
+
+// Setting first letter to Uppercase
+function firstLetterToUppercase(string) {
+    let str = string.toLowerCase();
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Count duplicate items
+function howManyPerCategorie(data) {
+    const counts = {};
+    data.forEach((x) => {
+        counts[x] = (counts[x] || 0) + 1;
+    });
+    return counts;
+}
+
+function calculatingPercentages(object) {
+    // Calculating total value
+    let total = 0;
+    total += Object.values(object).reduce((z, b) => z + b);
+    for (const [key, value] of Object.entries(object)) {
+    }
+}
+
+console.log(calculatingPercentages(howManyPerCategorie(cleaningData(eyecolor))));
+console.log(calculatingPercentages(howManyPerCategorie(cleaningData(windDirections))));
+console.log(cleaningData(eyecolor));
+console.log(cleaningData(windDirections));
+console.log(howManyPerCategorie(cleaningData(eyecolor)));
+console.log(howManyPerCategorie(cleaningData(windDirections)));
