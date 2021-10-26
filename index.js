@@ -45,14 +45,13 @@ function howManyPerCategorie(data) {
 function calculatingPercentages(object) {
     // Calculating total value
     let total = 0;
-    total += Object.values(object).reduce((z, b) => z + b);
-    for (const [key, value] of Object.entries(object)) {
-    }
+    total += Object.values(object).reduce((a, b) => a + b);
+    Object.keys(object).forEach((el) => {});
 }
 
-console.log(calculatingPercentages(howManyPerCategorie(cleaningData(eyecolor))));
-console.log(calculatingPercentages(howManyPerCategorie(cleaningData(windDirections))));
 console.log(cleaningData(eyecolor));
 console.log(cleaningData(windDirections));
 console.log(howManyPerCategorie(cleaningData(eyecolor)));
 console.log(howManyPerCategorie(cleaningData(windDirections)));
+console.log(calculatingPercentages(howManyPerCategorie(cleaningData(eyecolor))));
+console.log(calculatingPercentages(howManyPerCategorie(cleaningData(windDirections))));
