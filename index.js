@@ -10,15 +10,21 @@ dataPreCleaned.forEach((e) => {
     windDirections.push(e['favourite-wind-direction']);
 });
 
-//Cleaning data (Removing Dash, Spaces and Capitalizing)
+// Cleaning data (Removing Dash, Spaces and Capitalizing)
+// function cleaningData(data) {
+//     const cleanedArray = [];
+//     data.forEach((e) => {
+//         let string = removeDashAndSpaces(e);
+//         string = firstLetterToUppercase(string);
+//         cleanedArray.push(string);
+//     });
+//     return cleanedArray;
+// }
+
+// Cleaning data (Removing Dash, Spaces, and Capitalizing)
 function cleaningData(data) {
-    const cleanedArray = [];
-    data.forEach((e) => {
-        let string = removeDashAndSpaces(e);
-        string = firstLetterToUppercase(string);
-        cleanedArray.push(string);
-    });
-    return cleanedArray;
+    const cleanedArray = data.map((el) => removeDashAndSpaces(el));
+    return cleanedArray.map((el) => firstLetterToUppercase(el));
 }
 
 // Removing of dashed and spaces
@@ -46,7 +52,7 @@ function calculatingPercentages(object) {
     // Calculating total value
     let total = 0;
     total += Object.values(object).reduce((a, b) => a + b);
-    Object.keys(object).forEach((el) => {});
+    // Calculating percentage of total
 }
 
 console.log(cleaningData(eyecolor));
