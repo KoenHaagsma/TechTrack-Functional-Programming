@@ -1,14 +1,19 @@
 const dataPreCleaned = require('./data/data.json');
 const data = require('./data/tech-track-dataset.json');
 
-const eyecolor = [];
-const windDirections = [];
-
 // Get specific data
-dataPreCleaned.forEach((e) => {
-    eyecolor.push(e['eye-color']);
-    windDirections.push(e['favourite-wind-direction']);
-});
+// dataPreCleaned.forEach((e) => {
+//     eyecolor.push(e['eye-color']);
+//     windDirections.push(e['favourite-wind-direction']);
+// });
+
+function getSpecificData(data, keyName) {
+    const specificArray = [];
+    data.forEach((e) => {
+        specificArray.push(e[keyName]);
+    });
+    return specificArray;
+}
 
 // Cleaning data (Removing Dash, Spaces and Capitalizing)
 // function cleaningData(data) {
@@ -49,15 +54,29 @@ function howManyPerCategorie(data) {
 }
 
 function calculatingPercentages(object) {
+    let result = {};
     // Calculating total value
-    let total = 0;
-    total += Object.values(object).reduce((a, b) => a + b);
-    // Calculating percentage of total
+    const total = Object.values(object).reduce((a, b) => a + b, 0);
+    // Calculating percentage of total per key value
+    for (const [key, value] of Object.entries(object)) {
+        //const percentage = (value / total) * 100;
+        result[key] = (result[key] || 0) + Math.round((value / total) * 100);
+    }
+    return result;
 }
 
-console.log(cleaningData(eyecolor));
-console.log(cleaningData(windDirections));
-console.log(howManyPerCategorie(cleaningData(eyecolor)));
-console.log(howManyPerCategorie(cleaningData(windDirections)));
-console.log(calculatingPercentages(howManyPerCategorie(cleaningData(eyecolor))));
-console.log(calculatingPercentages(howManyPerCategorie(cleaningData(windDirections))));
+function processDataToCounts(data, key) {
+    let specificData = getSpecificData(data, key);
+    specificData = cleaningData(specificData);
+    specificData = howManyPerCategorie(specificData);
+    return specificData;
+}
+
+//Console logging results
+// console.log(cleaningData(getSpecificData(dataPreCleaned, 'eye-color')));
+// console.log(cleaningData(getSpecificData(dataPreCleaned, 'favourite-wind-direction')));
+// console.log(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'eye-color'))));
+// console.log(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'favourite-wind-direction'))));
+
+console.log(processDataToCounts(dataPreCleaned, 'eye-color'));
+console.log(calculatingPercentages(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'eye-color')))));
