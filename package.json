@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon index.js"
+        "dev": "nodemon app.js",
+        "clean": "nodemon index.js"
     },
     "repository": {
         "type": "git",
@@ -20,6 +21,8 @@
     "dependencies": {
         "camelcase": "^6.2.0",
         "camelcase-keys": "^7.0.1",
-        "nodemon": "^2.0.14"
+        "express": "^4.17.1",
+        "nodemon": "^2.0.14",
+        "pug": "^3.0.2"
     }
 }

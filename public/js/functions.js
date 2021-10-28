@@ -1,12 +1,4 @@
-const dataPreCleaned = require('./data/data.json');
-const data = require('./data/tech-track-dataset.json');
-
-// Get specific data
-// dataPreCleaned.forEach((e) => {
-//     eyecolor.push(e['eye-color']);
-//     windDirections.push(e['favourite-wind-direction']);
-// });
-
+// Get the specific data you want from the dataset
 function getSpecificData(data, keyName) {
     const specificArray = [];
     data.forEach((e) => {
@@ -14,17 +6,6 @@ function getSpecificData(data, keyName) {
     });
     return specificArray;
 }
-
-// Cleaning data (Removing Dash, Spaces and Capitalizing)
-// function cleaningData(data) {
-//     const cleanedArray = [];
-//     data.forEach((e) => {
-//         let string = removeDashAndSpaces(e);
-//         string = firstLetterToUppercase(string);
-//         cleanedArray.push(string);
-//     });
-//     return cleanedArray;
-// }
 
 // Cleaning data (Removing Dash, Spaces, and Capitalizing)
 function cleaningData(data) {
@@ -72,11 +53,18 @@ function processDataToCounts(data, key) {
     return specificData;
 }
 
-//Console logging results
-// console.log(cleaningData(getSpecificData(dataPreCleaned, 'eye-color')));
-// console.log(cleaningData(getSpecificData(dataPreCleaned, 'favourite-wind-direction')));
-// console.log(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'eye-color'))));
-// console.log(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'favourite-wind-direction'))));
+function processDataToPercentages(data, key) {
+    let specificData = getSpecificData(data, key);
+    specificData = cleaningData(specificData);
+    specificData = howManyPerCategorie(specificData);
+    specificData = calculatingPercentages(specificData);
+    return specificData;
+}
 
-console.log(processDataToCounts(dataPreCleaned, 'eye-color'));
-console.log(calculatingPercentages(howManyPerCategorie(cleaningData(getSpecificData(dataPreCleaned, 'eye-color')))));
+// console.log(processDataToCounts(dataPreCleaned, 'eye-color'));
+// console.log(processDataToPercentages(dataPreCleaned, 'eye-color'));
+
+module.exports = {
+    processDataToCounts: processDataToCounts,
+    processDataToPercentages: processDataToPercentages,
+};
