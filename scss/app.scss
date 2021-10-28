@@ -1,0 +1,14 @@
+// General
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+}
+
+// Imports
+@import '_colors';
+@import '_content';

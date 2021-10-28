@@ -3,13 +3,20 @@ const app = express();
 const port = 3000;
 const pug = require('pug');
 const dataPreCleaned = require('./data/data.json');
-const functions = require('./public/js/functions');
+const { processDataToCounts, processDataToPercentages, setColorsToHex } = require('./public/js/functions');
 
 app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-    res.render('home');
+    const percentagePerColor = processDataToPercentages(dataPreCleaned, 'eye-color');
+    const colorsToHex = setColorsToHex(dataPreCleaned, 'eye-color');
+    console.log(percentagePerColor);
+    res.render('home', {
+        colors: percentagePerColor,
+        hexColors: colorsToHex,
+        title: 'Kleuren v/d ogen',
+    });
 });
 
 app.listen(port, () => {

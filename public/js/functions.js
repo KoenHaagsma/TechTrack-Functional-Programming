@@ -1,3 +1,6 @@
+const data = require('../../data/data.json');
+const toHex = require('colornames');
+
 // Get the specific data you want from the dataset
 function getSpecificData(data, keyName) {
     const specificArray = [];
@@ -23,6 +26,46 @@ function removeDashAndSpaces(string) {
 function firstLetterToUppercase(string) {
     let str = string.toLowerCase();
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Set colors to their English name
+function translateToEnglish(data, keyName) {
+    const cleanedData = cleaningData(getSpecificData(data, keyName));
+    // Later i could use maybe the Google translate API but it's payed
+    return cleanedData.map((el) => translator(el));
+}
+
+// Set colors to HEX
+function setColorsToHex(data, keyName) {
+    const englishNames = translateToEnglish(data, keyName);
+    return englishNames.map((el) => toHex(el));
+}
+
+// Translator
+function translator(string) {
+    switch (string) {
+        case 'Bruin':
+            return (string = 'chocolate 4');
+            break;
+        case 'Donkerbruin':
+            return (string = 'saddlebrown');
+            break;
+        case 'Blauw':
+            return (string = 'royalblue 1');
+            break;
+        case 'Grijs':
+            return (string = 'Coldgrey');
+            break;
+        case 'Groengrijs':
+            return (string = 'Palegreen 4');
+            break;
+        case 'Groenblauw':
+            return (string = 'Turquoiseblue');
+            break;
+        case 'Groen':
+            return (string = 'Green');
+            break;
+    }
 }
 
 // Count duplicate items
@@ -61,10 +104,8 @@ function processDataToPercentages(data, key) {
     return specificData;
 }
 
-// console.log(processDataToCounts(dataPreCleaned, 'eye-color'));
-// console.log(processDataToPercentages(dataPreCleaned, 'eye-color'));
-
 module.exports = {
     processDataToCounts: processDataToCounts,
     processDataToPercentages: processDataToPercentages,
+    setColorsToHex: setColorsToHex,
 };
