@@ -5,10 +5,7 @@ button.addEventListener('click', (event) => {
         eyes[index].style.transform = `translate(${setTranslateCSSA(eyes)[index]}px, ${
             setTranslateCSSB(eyes)[index]
         }%)`;
-        console.log(eyes[index]);
     }
-    console.log(`translate(${setTranslateCSSA(eyes)[0]}, ${setTranslateCSSB(eyes)[0]})`);
-    console.log('test');
 });
 
 function setTranslateCSSA(data) {

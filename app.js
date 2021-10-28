@@ -5,24 +5,6 @@ const pug = require('pug');
 const dataPreCleaned = require('./data/data.json');
 const { processDataToCounts, processDataToPercentages, setColorsToHex } = require('./public/js/functions');
 
-function setTranslateCSSA(data) {
-    // Random number for a
-    const numArray = [];
-    data.forEach((el) => {
-        numArray.push(Math.ceil(Math.random() * 18) * (Math.round(Math.random()) ? 1 : -1));
-    });
-    return numArray;
-}
-
-function setTranslateCSSB(data) {
-    // Random number for b
-    const numArray = [];
-    data.forEach((el) => {
-        numArray.push(Math.floor(Math.random() * 40) + 1);
-    });
-    return numArray;
-}
-
 app.use(express.static('./public/'));
 app.set('views', './views');
 app.set('view engine', 'pug');
@@ -35,8 +17,6 @@ app.get('/', (req, res) => {
         colors: percentagePerColor,
         hexColors: colorsToHex,
         title: 'Kleuren v/d ogen',
-        translateA: setTranslateCSSA(colorsToHex),
-        translateB: setTranslateCSSB(colorsToHex),
     });
 });
 
