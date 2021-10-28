@@ -3,12 +3,15 @@ extends layout
 block content
 	h1 #{title}
 	p Oogkleuren van iedereen in de klas
+	button(id='random' class='randomizerButton') Randomize de ogen
 	div(class='block-container')
 		each key, value in hexColors
 			div(class='eyeball-container')
 				li(class='eyeball')
-					div(style=`background-color: ${key}` class='color-block')
+					div(style=`background-color: ${key};`  class='color-block')
 						div(class='pupil')
 				li(class='eyeball')
-					div(style=`background-color: ${key}` class='color-block')
+					div(style=`background-color: ${key};` class='color-block')
 						div(class='pupil')
+	div(class='block-container')
+		h2 Nu in percentages
