@@ -83,7 +83,6 @@ function calculatingPercentages(object) {
     const total = Object.values(object).reduce((a, b) => a + b, 0);
     // Calculating percentage of total per key value
     for (const [key, value] of Object.entries(object)) {
-        //const percentage = (value / total) * 100;
         result[key] = (result[key] || 0) + Math.round((value / total) * 100);
     }
     return result;
