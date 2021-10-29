@@ -42,13 +42,14 @@ function setColorsToHex(data, keyName) {
 }
 
 // Translator
+// Used the color translation from the package, so the translation are nog 100% valid
 function translator(string) {
     switch (string) {
         case 'Bruin':
             return (string = 'chocolate 4');
             break;
         case 'Donkerbruin':
-            return (string = 'saddlebrown');
+            return (string = 'burntsienna');
             break;
         case 'Blauw':
             return (string = 'royalblue 1');
@@ -88,23 +89,32 @@ function calculatingPercentages(object) {
     return result;
 }
 
-function processDataToCounts(data, key) {
-    let specificData = getSpecificData(data, key);
+function processDataToCounts(data, keyName) {
+    let specificData = getSpecificData(data, keyName);
     specificData = cleaningData(specificData);
-    specificData = howManyPerCategorie(specificData);
-    return specificData;
+    return howManyPerCategorie(specificData);
 }
 
-function processDataToPercentages(data, key) {
-    let specificData = getSpecificData(data, key);
+function processDataToPercentages(data, keyName) {
+    let specificData = getSpecificData(data, keyName);
     specificData = cleaningData(specificData);
     specificData = howManyPerCategorie(specificData);
-    specificData = calculatingPercentages(specificData);
-    return specificData;
+    return calculatingPercentages(specificData);
 }
+
+function keyToHex(data) {
+    const onlyKeys = Object.keys(data);
+    const translatedKeys = onlyKeys.map((el) => translator(el));
+    const hexKeys = translatedKeys.map((el) => toHex(el));
+    return hexKeys;
+}
+
+console.log(keyToHex(processDataToPercentages(data, 'eye-color')));
 
 module.exports = {
     processDataToCounts: processDataToCounts,
     processDataToPercentages: processDataToPercentages,
     setColorsToHex: setColorsToHex,
+    translator: translator,
+    keyToHex: keyToHex,
 };

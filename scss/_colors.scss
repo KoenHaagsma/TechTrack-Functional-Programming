@@ -45,7 +45,7 @@ button {
             height: 4rem;
             margin: 1rem;
             .color-block {
-                transition: 0.5s;
+                transition: 0.25s;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -61,6 +61,29 @@ button {
                     height: 0.75rem;
                 }
             }
+        }
+    }
+}
+
+.block-percentage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .percentage-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        list-style-type: none;
+        li {
+            border-radius: 5px;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem;
+            border: 1px solid grey;
+            padding: 5rem;
         }
     }
 }

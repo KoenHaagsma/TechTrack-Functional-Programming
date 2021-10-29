@@ -13,5 +13,11 @@ block content
 				li(class='eyeball')
 					div(style=`background-color: ${key};` class='color-block')
 						div(class='pupil')
-	div(class='block-container')
-		h2 Nu in percentages
+	div(class='block-container block-percentage')
+		h2 Nu in procenten
+		p Oogkleuren van iedereen maar dan in percentages
+		div(class='percentage-container')
+			-let index = 0
+			each key, value in colors
+				li(style=`background-color: ${hexKeys[index++]}`)= `${key}% ${value}`
+			
