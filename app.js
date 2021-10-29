@@ -12,7 +12,6 @@ app.set('view engine', 'pug');
 app.get('/', (req, res) => {
     const percentagePerColor = processDataToPercentages(dataPreCleaned, 'eye-color');
     const colorsToHex = setColorsToHex(dataPreCleaned, 'eye-color');
-    console.log(percentagePerColor);
     res.render('home', {
         colors: percentagePerColor,
         hexColors: colorsToHex,

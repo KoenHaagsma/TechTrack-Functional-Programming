@@ -23,7 +23,10 @@ button {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 4rem;
+    @media screen and (max-width: $screen-size-desktop) {
+        padding: 0 4rem;
+    }
+    padding: 0 12rem;
     margin-top: 2rem;
     .eyeball-container {
         display: flex;
