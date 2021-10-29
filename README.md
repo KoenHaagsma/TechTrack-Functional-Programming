@@ -1,4 +1,4 @@
-# ⚙ Front-end Applications
+# ⚙ Front-end Applications  [![Front-end](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications)
 
 ## 🧾 Inhoudsopgave
 
@@ -63,5 +63,5 @@ npm run dev
 
 ## 🔖 License
 
-[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/KoenHaagsma/ProjectTechKSA/blob/main/LICENSE)
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications/blob/main/LICENSE)
 
