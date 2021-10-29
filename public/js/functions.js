@@ -103,13 +103,11 @@ function processDataToPercentages(data, keyName) {
 }
 
 function keyToHex(data) {
-    const onlyKeys = Object.keys(data);
-    const translatedKeys = onlyKeys.map((el) => translator(el));
-    const hexKeys = translatedKeys.map((el) => toHex(el));
-    return hexKeys;
+    const onlyKeys = Object.keys(data)
+        .map((el) => translator(el))
+        .map((el) => toHex(el));
+    return onlyKeys;
 }
-
-console.log(keyToHex(processDataToPercentages(data, 'eye-color')));
 
 module.exports = {
     processDataToCounts: processDataToCounts,
