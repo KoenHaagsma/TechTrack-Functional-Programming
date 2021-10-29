@@ -13,7 +13,7 @@
 
 ## 📖 Over het project
 Dit project is gemaakt op basis van een enquete formulier die we zelf konden invullen, die data is omgezet naar JSON en daar ben ik mee aan de slag gegaan.
-Tijdens dit project is er een logboek bijgehouden waarin je precies van dag tot dag kan zien wat er gedaan is: [Logboek]()
+Tijdens dit project is er een logboek bijgehouden waarin je precies van dag tot dag kan zien wat er gedaan is: [logboek]().
 Ook staat er in de [wiki](): Code met uitleg, research, het concept, configuratie & bronnen
 
 ### 🛠 Gerealiseerd met
