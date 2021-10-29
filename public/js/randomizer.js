@@ -1,5 +1,6 @@
 const button = document.querySelector('#random');
 const eyes = document.querySelectorAll('.color-block');
+
 button.addEventListener('click', (event) => {
     for (let index = 0; index < eyes.length; index++) {
         eyes[index].style.transform = `translate(${setTranslateCSSA(eyes)[index]}px, ${

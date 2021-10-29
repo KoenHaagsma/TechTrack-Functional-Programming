@@ -2,8 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const pug = require('pug');
+const toHex = require('colornames');
 const dataPreCleaned = require('./data/data.json');
-const { processDataToCounts, processDataToPercentages, setColorsToHex } = require('./public/js/functions');
+const {
+    processDataToCounts,
+    processDataToPercentages,
+    setColorsToHex,
+    translator,
+    keyToHex,
+} = require('./public/js/functions');
 
 app.use(express.static('./public/'));
 app.set('views', './views');
@@ -16,6 +23,7 @@ app.get('/', (req, res) => {
         colors: percentagePerColor,
         hexColors: colorsToHex,
         title: 'Kleuren v/d ogen',
+        hexKeys: keyToHex(processDataToPercentages(dataPreCleaned, 'eye-color')),
     });
 });
 
