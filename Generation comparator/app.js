@@ -1,17 +1,19 @@
 import { fetchData } from './fetch.js';
 
+// Need to use the limit in the URL, for the first generation
 const firstGenerationPokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=151';
 
-function setArray(url) {
+// Function to
+function characterHeight(url) {
     const newArray = [];
     return fetchData(url)
         .then(async (data) => {
             const keys = Object.keys(data.results);
             for (const item of keys) {
-                await fetchData(data.results[item].url).then((pokemon) => {
+                await fetchData(data.results[item].url).then((el) => {
                     const single = {
-                        name: pokemon.name,
-                        height: pokemon.height,
+                        name: el.name,
+                        height: el.height,
                     };
                     newArray.push(single);
                 });
@@ -23,5 +25,5 @@ function setArray(url) {
         });
 }
 
-const newArray = await setArray(firstGenerationPokeURL);
+const newArray = await characterHeight(firstGenerationPokeURL);
 console.log(newArray);
