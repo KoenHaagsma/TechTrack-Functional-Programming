@@ -1,4 +1,4 @@
-# ⚙ Front-end Applications  [![Front-end](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications)
+# ⚙ Front-end Applications
 
 ## 🧾 Inhoudsopgave
 
