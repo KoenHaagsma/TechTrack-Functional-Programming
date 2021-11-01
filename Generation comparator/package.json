@@ -1,0 +1,17 @@
+{
+    "name": "generation-comparator",
+    "version": "1.0.0",
+    "description": "Comparing pokemon generation",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon app.js"
+    },
+    "author": "Koen Haagsma",
+    "license": "MIT",
+    "dependencies": {
+        "node-fetch": "^3.0.0",
+        "nodemon": "^2.0.14"
+    }
+}
