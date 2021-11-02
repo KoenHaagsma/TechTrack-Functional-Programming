@@ -1,5 +1,6 @@
 # ⚙ Front-end Applications - Functional programming
 ## 📂 Opdracht
+De opdracht is om doormiddel van functional programming een datavisualisatie te maken met een openbare API.
 
 ## 🧾 Inhoudsopgave
 
