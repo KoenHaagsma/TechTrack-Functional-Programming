@@ -1,4 +1,5 @@
-# ⚙ Front-end Applications
+# ⚙ Front-end Applications - Functional programming
+## 📂 Opdracht
 
 ## 🧾 Inhoudsopgave
 
@@ -59,7 +60,7 @@ npm run dev
 
 ## 📑 Bronnen
 
-- [Bronnen]()
+- [Bronnen](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications/wiki/%F0%9F%96%BC-Bronnen)
 
 ## 🔖 License
 
