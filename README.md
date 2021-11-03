@@ -2,56 +2,54 @@
 *Insert picture/gif of full project UI*
 
 ## 📂 Assignment
-*Assignment explanation*
+The assignment of functional programming is to apply functional programming principles and using that to process and clean data from an (open) API
 
-## 📂 Opdracht
-De opdracht is om doormiddel van functional programming een datavisualisatie te maken met een openbare API.
+## 🧾 Table of contents
 
-## 🧾 Inhoudsopgave
-
--   [Over het project](##About-the-project)
-      * [Gerealiseerd met](###Built-with)
+-   [About the project](##About-the-project)
+      * [Built with](###Built-with)
 -   [Getting started](##Getting-started)
-      * [Installatie](##Installation)
+      * [Installation](###Installation)
 -   [Packages/Dependecies](##Packages/dependecies)
-      * [Dependecies](##Dependecies)
-      * [Dev dependecies](##Dev-dependecies)
+      * [Dependecies](###Dependecies)
+      * [Dev dependecies](###Dev-dependecies)
+-   [Sources](##Sources)
 -   [License](##License)
 
-## 📖 Over het project
-Dit project is gemaakt op basis van een enquete formulier die we zelf konden invullen, die data is omgezet naar JSON en daar ben ik mee aan de slag gegaan.
-Tijdens dit project is er een logboek bijgehouden waarin je precies van dag tot dag kan zien wat er gedaan is: [logboek]().
-Ook staat er in de [wiki](): Code met uitleg, research, het concept, configuratie & bronnen
+## 📖 About the project
+This project consists out of two applications, one a Pokemon comparetor and one a Eye color visualization, for the Pokemon comperator i used an open API called PokeAPI, to get all Pokemons that ever existed in the Pokemon franchise, for the eye color visualization we used a form that we filled in ourselfs.
+During the project i logged everyday in a [logbook](), if you want to read specific thing that i did from day to day read the [logbook]().
+There is also a wiki with detailed information.
 
-### 🛠 Gerealiseerd met
-Deze applicatie is gemaakt met [NodeJs](https://nodejs.org/en/) en extra toevoegingen:
+### 🛠 Built with
+This application is built with [NodeJs](https://nodejs.org/en/) and extra:
 - Pug templating engine
 - [Packages]()
 
 ## 🔍 Getting started
-Voordat je kan starten met het gebruiken van deze applicatie, moet je deze eerst installeren op jouw apparaat, volg daarvoor hieronder de installatie
+Before using these files you need to install them first, continue below here to install the application.
 
-### 🔨 Installatie
+### 🔨 Installation
 
-1. Open je terminal, of de terminal in je IDE
+1. Open your terminal, or the terminal in your IDE
 
-2. Clone de repository
+2. Clone the repository
 ```
 git clone https://github.com/KoenHaagsma/TechTrack-Frontend-Applications.git
 ```
-3. Ga naar cloned repository
+3. Go to the conled repository
 ```
 cd ../../Techtrack-Frontend-Applications
 ```
-4. Installeer de packages die nodig zijn
+4. Install all packages
 ```
 npm install || npm i
 ```
-5. Start de applicatie voor development.
+5. Start the application for development
 ```
 npm run dev
 ```
-6. Open de server in de browser, ga naar [Localhost](http://localhost:3000/). Als dit niet werkt verander poort 3000 naar iets anders.
+6. Open the server in your browser [Localhost](http://localhost:3000/). If this doesn't work change the port 3000 till something else.
 
 ## 🧰 Packages/dependecies
 
@@ -64,9 +62,9 @@ npm run dev
 
 - [nodemon](https://www.npmjs.com/package/nodemon)
 
-## 📑 Bronnen
+## 📑 Sources
 
-- [Bronnen](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications/wiki/%F0%9F%96%BC-Bronnen)
+- [Sources](https://github.com/KoenHaagsma/TechTrack-Frontend-Applications/wiki/%F0%9F%96%BC-Bronnen)
 
 ## 🔖 License
 
