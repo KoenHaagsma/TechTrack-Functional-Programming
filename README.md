@@ -1,4 +1,8 @@
 # ⚙ Front-end Applications - Functional programming
+### Eye-color visualisation
+*Insert picture/gif of full project UI*
+
+### Pokemon comparison
 *Insert picture/gif of full project UI*
 
 ## 📂 Assignment
@@ -17,7 +21,7 @@ The assignment of functional programming is to apply functional programming prin
 -   [License](##License)
 
 ## 📖 About the project
-This project consists out of two applications, one a Pokemon comparetor and one a Eye color visualization, for the Pokemon comperator i used an open API called PokeAPI, to get all Pokemons that ever existed in the Pokemon franchise, for the eye color visualization we used a form that we filled in ourselfs.
+This project consists out of two applications, one a Pokemon comparetor and one a Eye color visualisation, for the Pokemon comperator i used an open API called PokeAPI, to get all Pokemons that ever existed in the Pokemon franchise, for the eye color visualisation we used a form that we filled in ourselfs.
 During the project i logged everyday in a [logbook](), if you want to read specific thing that i did from day to day read the [logbook]().
 There is also a wiki with detailed information.
 
