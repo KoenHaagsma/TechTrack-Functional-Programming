@@ -1,4 +1,9 @@
 # ⚙ Front-end Applications - Functional programming
+*Insert picture/gif of full project UI*
+
+## 📂 Assignment
+*Assignment explanation*
+
 ## 📂 Opdracht
 De opdracht is om doormiddel van functional programming een datavisualisatie te maken met een openbare API.
 
