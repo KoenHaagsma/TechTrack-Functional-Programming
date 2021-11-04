@@ -13,16 +13,17 @@
 The assignment of functional programming is to apply functional programming principles and using it to process and clean data from an (open) API/JSON file.
 
 ## 🧾 Table of contents
-
--   [About the project](##About-the-project)
-    -   [Built with](###Built-with)
--   [Getting started](##Getting-started)
-    -   [Installation](###Installation)
--   [Packages/Dependecies](##Packages/dependecies)
-    -   [Dependecies](###Dependecies)
-    -   [Dev dependecies](###Dev-dependecies)
--   [Sources](##Sources)
--   [License](##License)
+  * [📂 Assignment](#---assignment)
+  * [🧾 Table of contents](#---table-of-contents)
+  * [📖 About the project](#---about-the-project)
+    + [🛠 Built with](#---built-with)
+  * [🔍 Getting started](#---getting-started)
+    + [🔨 Installation](#---installation)
+  * [🧰 Packages/dependecies](#---packages-dependecies)
+    + [🧱 Dependecies](#---dependecies)
+    + [🧱 Dev dependecies](#---dev-dependecies)
+  * [📑 Sources](#---sources)
+  * [🔖 License](#---license)
 
 ## 📖 About the project
 
