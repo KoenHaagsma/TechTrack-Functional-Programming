@@ -17,6 +17,7 @@ The assignment of functional programming is to apply functional programming prin
   * [🧾 Table of contents](#---table-of-contents)
   * [📖 About the project](#---about-the-project)
     + [🛠 Built with](#---built-with)
+    + [📅 Dataset used](#---dataset-used)
   * [🔍 Getting started](#---getting-started)
     + [🔨 Installation](#---installation)
   * [🧰 Packages/dependecies](#---packages-dependecies)
@@ -38,6 +39,52 @@ This application is built with [NodeJs](https://nodejs.org/en/) and extra packag
 -   [🧰 Packages/dependecies](#---packages-dependecies)
 -   [PokeAPI](https://pokeapi.co/)  
 
+### 📅 Dataset used
+Because this repo contains two projects i used two datasets:
+- The dataset from the form that we had to fill in:
+  A single object looks like this:
+  ```JSON
+    {
+      "favourite-pet": "kat",
+      "eye-color": "Bruin",
+      "favourite-wind-direction": "Oost",
+      "excitement-for-tech-track": 7,
+      "choose-to-answer-this-question": "Oke",
+      "favourite-date": "15/01/1999",
+      "favourite-date-in-text": "vijftien januari negentiennegenennegentig",
+      "favourite-dairy-product": "Melk",
+      "clothing-colors": "Zwart, Grijs",
+      "favourite-floor-to-study": 2,
+      "future-occupation": "Frontend developer",
+      "future-occupation-eight-year-old": "Piloot",
+      "is-cheese-a-mammal": "Wat.",
+      "future-car-brand": "Mercedes C63 AMG"
+    },
+  ```
+- The dataset from an API, i used the PokéAPI.
+  I pasted a small snippet of the JSON file that is being imported:
+  ```JSON
+  {
+  "abilities": [
+    {
+      "ability": {
+        "name": "limber",
+        "url": "https://pokeapi.co/api/v2/ability/7/"
+      },
+      "is_hidden": false,
+      "slot": 1
+    },
+    {
+      "ability": {
+        "name": "imposter",
+        "url": "https://pokeapi.co/api/v2/ability/150/"
+      },
+      "is_hidden": true,
+      "slot": 3
+    }
+  ],
+  ```
+  
 ## 🔍 Getting started
 
 Before using these files you need to install them first, continue below here to install the application.
