@@ -33,10 +33,10 @@ There is also a wiki with detailed information.
 
 ### 🛠 Built with
 
-This application is built with [NodeJs](https://nodejs.org/en/) and extra:
+This application is built with [NodeJs](https://nodejs.org/en/) and extra packages etc.:
 
--   Pug templating engine
--   [Packages]()
+-   * [🧰 Packages/dependecies](#---packages-dependecies)
+-   [PokeAPI](https://pokeapi.co/)  
 
 ## 🔍 Getting started
 
