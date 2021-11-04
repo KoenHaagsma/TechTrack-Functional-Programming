@@ -73,7 +73,8 @@ function translator(string) {
 function howManyPerCategorie(data) {
     const counts = {};
     data.forEach((x) => {
-        counts[x] = (counts[x] || 0) + 1;
+        //
+        counts[x] = (counts[x] || 0) + 1; // For each count of color add new one or add + 1
     });
     return counts;
 }
@@ -110,9 +111,9 @@ function keyToHex(data) {
 }
 
 module.exports = {
-    processDataToCounts: processDataToCounts,
-    processDataToPercentages: processDataToPercentages,
-    setColorsToHex: setColorsToHex,
-    translator: translator,
-    keyToHex: keyToHex,
+    processDataToCounts,
+    processDataToPercentages,
+    setColorsToHex,
+    translator,
+    keyToHex,
 };

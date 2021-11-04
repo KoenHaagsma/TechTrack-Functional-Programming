@@ -9,6 +9,7 @@ button.addEventListener('click', (event) => {
     }
 });
 
+// Getting first value for Translate in CSS
 function setTranslateCSSA(data) {
     // Random number for a
     const numArray = [];
@@ -18,6 +19,7 @@ function setTranslateCSSA(data) {
     return numArray;
 }
 
+// Getting second value for Translate in CSS
 function setTranslateCSSB(data) {
     // Random number for b
     const numArray = [];
