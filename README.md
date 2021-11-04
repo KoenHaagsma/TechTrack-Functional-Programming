@@ -35,7 +35,7 @@ There is also a wiki with detailed information.
 
 This application is built with [NodeJs](https://nodejs.org/en/) and extra packages etc.:
 
--   * [🧰 Packages/dependecies](#---packages-dependecies)
+-   [🧰 Packages/dependecies](#---packages-dependecies)
 -   [PokeAPI](https://pokeapi.co/)  
 
 ## 🔍 Getting started
