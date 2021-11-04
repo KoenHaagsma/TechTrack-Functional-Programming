@@ -1,12 +1,12 @@
 # ⚙ Front-end Applications - Functional programming
 ### Eye-color visualisation
-*Insert picture/gif of full project UI*
+![Image of Eye-color visualisation](./img/oogKleuren.png)
 
 ### Pokemon comparison
-*Insert picture/gif of full project UI*
+![Console log of Pokemon project]()
 
 ## 📂 Assignment
-The assignment of functional programming is to apply functional programming principles and using that to process and clean data from an (open) API
+The assignment of functional programming is to apply functional programming principles and using it to process and clean data from an (open) API/JSON file.
 
 ## 🧾 Table of contents
 
