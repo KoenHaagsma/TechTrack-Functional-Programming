@@ -78,6 +78,7 @@ npm run dev
 
 -   [express](https://www.npmjs.com/package/express)
 -   [pug](https://www.npmjs.com/package/pug)
+-   [colornames](https://www.npmjs.com/package/colornames)
 
 ### 🧱 Dev dependecies
 
