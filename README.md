@@ -61,7 +61,7 @@ Because this repo contains two projects i used two datasets:
       "future-car-brand": "Mercedes C63 AMG"
     },
   ```
-- The dataset from an API, i used the PokéAPI.
+- The dataset from an API, i used the [PokéAPI](https://pokeapi.co/).
   I pasted a small snippet of the JSON file that is being imported:
   ```JSON
   {
