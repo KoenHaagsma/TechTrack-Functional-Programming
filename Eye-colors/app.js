@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const pug = require('pug');
-const toHex = require('colornames');
 const dataPreCleaned = require('./data/data.json');
 const {
     processDataToCounts,
