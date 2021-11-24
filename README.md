@@ -1,4 +1,4 @@
-# ⚙ Front-end Applications - Functional programming
+# ⚙ Functional programming
 
 ### Eye-color visualisation
 
